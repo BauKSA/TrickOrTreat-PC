@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Layers">
+      <UniqueIdentifier>{836e243d-35ce-4671-afdd-4000bb6b32f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Layers\Graphic">
+      <UniqueIdentifier>{445e2787-c464-4e57-8c0d-d2e2838ad693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Layers\Graphic\GraphicLayer">
+      <UniqueIdentifier>{292f710e-a366-46c9-89a2-321860d10534}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{b9fc784b-c01a-4b27-ab3b-428878cd81b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Layers\Graphic\SFML">
+      <UniqueIdentifier>{d9967c91-f93e-45cd-ad49-b982bd0d5b2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Log">
+      <UniqueIdentifier>{1c93678f-6936-45e3-b697-d5fcf8a4e953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Actor">
+      <UniqueIdentifier>{39488c44-3876-4053-815f-f2f9a6c1ffe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Component">
+      <UniqueIdentifier>{ef11cd25-e32d-46a9-8fb1-56edcea12cb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Stage">
+      <UniqueIdentifier>{f57243e1-985f-40e9-9182-45241cf32276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{13e1ce97-a9a0-45ed-a463-a09d9d7681db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Component\InterpolationMovement">
+      <UniqueIdentifier>{c559b42b-2287-4b4e-9ead-3a8311f86de7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Player">
+      <UniqueIdentifier>{fdf819f9-7306-45a8-8fd4-b958d374029e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Stage">
+      <UniqueIdentifier>{f544eb79-b2df-4d3c-b0a7-ab5ea8867970}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\EventHandler">
+      <UniqueIdentifier>{6e6cc043-9ec5-4e67-9936-7cf585743485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\EventHandler\PlayerMap">
+      <UniqueIdentifier>{58ba6ab7-206d-495f-a3f4-3f8f91f274f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TextManager">
+      <UniqueIdentifier>{35d6267c-cc75-472f-a2ff-aa6bf5c62351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Font">
+      <UniqueIdentifier>{e092eef1-174c-4c38-b1f2-766d57d8f537}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SFMLGraphics.cpp">
+      <Filter>Header Files\Layers\Graphic\SFML</Filter>
+    </ClCompile>
+    <ClCompile Include="log.cpp">
+      <Filter>Header Files\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics.cpp">
+      <Filter>Header Files\Layers\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="SFMLResourceManager.cpp">
+      <Filter>Header Files\Layers\Graphic\SFML</Filter>
+    </ClCompile>
+    <ClCompile Include="actor.cpp">
+      <Filter>Header Files\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interpolationMovement.cpp">
+      <Filter>Header Files\Component\InterpolationMovement</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Header Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="stage1_1.cpp">
+      <Filter>Resource Files\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="playerMapEventHandler.cpp">
+      <Filter>Header Files\EventHandler\PlayerMap</Filter>
+    </ClCompile>
+    <ClCompile Include="textManager.cpp">
+      <Filter>Header Files\TextManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GraphicLayer.h">
+      <Filter>Header Files\Layers\Graphic\GraphicLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceIDs.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="SFMLGraphics.h">
+      <Filter>Header Files\Layers\Graphic\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Header Files\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Header Files\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Header Files\Layers\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Header Files\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>Header Files\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="tileset.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite_map.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="map_player.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InterpolationMovement.h">
+      <Filter>Header Files\Component\InterpolationMovement</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Resource Files\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="create1_1.h">
+      <Filter>Resource Files\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="stage_include.h">
+      <Filter>Resource Files\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandler.h">
+      <Filter>Header Files\EventHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerMapEventHandler.h">
+      <Filter>Header Files\EventHandler\PlayerMap</Filter>
+    </ClInclude>
+    <ClInclude Include="TextManager.h">
+      <Filter>Header Files\TextManager</Filter>
+    </ClInclude>
+    <ClInclude Include="font_background.h">
+      <Filter>Resource Files\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="font.h">
+      <Filter>Resource Files\Font</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

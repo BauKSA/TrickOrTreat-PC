@@ -11,7 +11,7 @@ constexpr uint8_t NONE_SPRITE = 255;
 constexpr unsigned int SCREEN_WIDTH = 128;
 constexpr unsigned int SCREEN_HEIGHT = 64;
 constexpr unsigned int TEXT_X_INIT = 9;
-constexpr unsigned int TEXT_Y_INIT = SCREEN_HEIGHT - 20;
+constexpr unsigned int TEXT_Y_INIT = SCREEN_HEIGHT - 26;
 
 constexpr uint8_t TILE_SIZE = 4;
 

@@ -21,7 +21,13 @@ int main() {
 
 	TextManager& text = TextManager::instance();
 
-	text.start_text("TRICK OR TREAT TRICK OR TREAT TRICK OR TREAT");
+	Text txt{};
+
+	strncpy_s(txt.first_line, sizeof(txt.first_line), "TRICK OR TREAT TRICK", _TRUNCATE);
+	strncpy_s(txt.second_line, sizeof(txt.second_line), "OR TREAT HEHE", _TRUNCATE);
+
+	const Text* texts[1] = { &txt };
+	text.start_text(texts, 1);
 
 	while (graphics->is_open()) {
 		graphics->clear();

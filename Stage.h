@@ -14,6 +14,9 @@ private:
 	CustomSpriteName background;
 	uint8_t collision_map[VERTICAL_TILES][HORIZONTAL_TILES] = { 0 };
 
+	COORDS events[MAX_STAGE_EVENTS] = {};
+	uint8_t current_event_count = 0;
+
 	uint8_t name;
 public:
 	Stage() = default;
@@ -57,6 +60,11 @@ public:
 		graphics->draw_custom_sprite(background, 0.f, 0.f);
 	}
 
+	void update() {
+		draw();
+		handle_events();
+	}
+
 	bool is_blocked(int8_t x, int8_t y) const {
 		if (x < 0 || x >= VERTICAL_TILES || y < 0 || y >= HORIZONTAL_TILES)
 			return true;
@@ -85,6 +93,17 @@ public:
 		return collision_map[x][y] == 1;
 	}
 
+	void add_event(COORDS coord) {
+		if (current_event_count >= MAX_STAGE_EVENTS) return;
+		events[current_event_count++] = coord;
+	}
+
+	uint8_t event_count()const { return current_event_count; }
+	COORDS* get_events() { return events; }
+	virtual void handle_events() {}
+
 	Stage(Stage&&) = default;
 	Stage& operator=(Stage&&) = default;
+
+	virtual ~Stage() = default;
 };

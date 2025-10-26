@@ -6,7 +6,9 @@
 #include "ResourceIDs.h"
 
 constexpr uint8_t NONE_SPRITE = 255;
+constexpr uint8_t MAX_STAGE_EVENTS = 20;
 
+typedef void(*Callback)(void* ctx);
 
 constexpr unsigned int SCREEN_WIDTH = 128;
 constexpr unsigned int SCREEN_HEIGHT = 64;
@@ -95,6 +97,7 @@ namespace Key {
 		DOWN,
 		RIGHT,
 		LEFT,
+		ACTION
 	};
 };
 

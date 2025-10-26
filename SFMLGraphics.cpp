@@ -117,6 +117,8 @@ Key::Keyboard SFMLGraphics::key_map(sf::Keyboard::Key key) {
 		return Key::Keyboard::UP;
 	case sf::Keyboard::S:
 		return Key::Keyboard::DOWN;
+	case sf::Keyboard::K:
+		return Key::Keyboard::ACTION;
 	default:
 		return Key::Keyboard::NONE;
 	}

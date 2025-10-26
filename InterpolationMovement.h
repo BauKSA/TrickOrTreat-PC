@@ -28,9 +28,5 @@ public:
 		target_set = false;
 	};
 
-	void stop() {
-		moving = false;
-		direction = Directions::NONE;
-		progress = 0;
-	};
+	void stop(uint8_t x, uint8_t y);
 };

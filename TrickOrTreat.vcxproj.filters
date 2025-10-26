@@ -64,6 +64,9 @@
     <Filter Include="Resource Files\Font">
       <UniqueIdentifier>{e092eef1-174c-4c38-b1f2-766d57d8f537}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\EventHandler\TextEventHandler">
+      <UniqueIdentifier>{1947a495-151e-40dd-845f-33a2008fbc8d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SFMLGraphics.cpp">
@@ -166,6 +169,9 @@
     </ClInclude>
     <ClInclude Include="font.h">
       <Filter>Resource Files\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="TextEventHandler.h">
+      <Filter>Header Files\EventHandler\TextEventHandler</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -15,8 +15,8 @@ class Actor {
 private:
 	uint8_t id;
 
-	int8_t x;
-	int8_t y;
+	uint8_t x;
+	uint8_t y;
 
 	Resources::TextureID texture;
 	uint8_t current_sprite;
@@ -35,7 +35,7 @@ public:
 	Actor(const Actor&) = delete;                  // ❌ prohibir copia
 	Actor& operator=(const Actor&) = delete;       // ❌ prohibir copia
 
-	Actor(uint8_t _id, int8_t _x, int8_t _y, uint8_t z = 0)
+	Actor(uint8_t _id, uint8_t _x, uint8_t _y, uint8_t z = 0)
 		: id(_id), x(_x), y(_y), render_texture(0), texture_size{ 0, 0 }, texture(Resources::TextureID::NONE),
 		index(z), current_sprite(NONE_SPRITE) {
 	}
@@ -65,8 +65,8 @@ public:
 	//Getters
 	/*float width()const { return graphics->get_texture_size(current_sprite).width; }
 	float height()const { return graphics->get_texture_size(current_sprite).height; }*/
-	int8_t get_x()const { return x; }
-	int8_t get_y()const { return y; }
+	uint8_t get_x()const { return x; }
+	uint8_t get_y()const { return y; }
 	uint8_t z_index()const { return index; }
 	uint8_t get_id()const { return id; }
 	uint8_t get_sprite()const { return current_sprite; }

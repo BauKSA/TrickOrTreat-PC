@@ -171,6 +171,7 @@
     <ClInclude Include="sprite_map.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="stage_include.h" />
+    <ClInclude Include="TextEventHandler.h" />
     <ClInclude Include="TextManager.h" />
     <ClInclude Include="tileset.h" />
     <ClInclude Include="Utils.h" />

@@ -8,5 +8,6 @@ public:
 	EventHandler() = default;
 	virtual ~EventHandler() = default;
 
-	virtual void handle(Actor& actor, Event e) = 0;
+	virtual void handle(Actor& actor, Event e) {};
+	virtual void handle(Event e) {};
 };

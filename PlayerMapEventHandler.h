@@ -3,6 +3,7 @@
 #include "Utils.h"
 
 class PlayerMapEventHandler : public EventHandler {
+using EventHandler::handle;
 private:
 	void move(Directions dir, Actor& actor);
 	bool check_position(int8_t x, int8_t y);

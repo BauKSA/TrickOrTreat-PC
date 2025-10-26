@@ -34,9 +34,14 @@ private:
 
 	CustomTextureID temp_texture;
 
+	Callback after_text_callback;
+	void* ctx;
+
 	TileCoords get_coords(char c);
 public:
-	TextManager() : font(101), background(102), text{} {
+	TextManager() : font(101), background(102), text{},
+		after_text_callback(nullptr),
+		ctx(nullptr) {
 		Log::log(LogType::INFO, "creating text manager");
 		graphics->create_tileset(font, Resources::TextureID::FONT, 80, 15, 5, 5);
 		graphics->load_texture(Resources::TextureID::FONT_BACKGROUND, 128, 28);
@@ -49,9 +54,10 @@ public:
 		return mngr;
 	}
 
-	void start_text(const Text* text[], uint8_t size);
+	void start_text(const Text* text[], uint8_t size, Callback cb = nullptr, void* ctx = nullptr);
 	void update(float delta_time);
 	void stop_text();
 
 	bool is_done() const;
+	void next_text();
 };

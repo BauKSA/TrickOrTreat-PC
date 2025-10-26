@@ -71,16 +71,45 @@ TileCoords TextManager::get_coords(char c) {
 		return { 9, 1 };
 	case '.':
 		return { 10, 1 };
+	case ',':
+		return { 11, 1 };
+	case '!':
+		return { 12, 1 };
+	case '?':
+		return { 13, 1 };
+	case '0':
+		return { 0, 2 };
+	case '1':
+		return { 1, 2 };
+	case '2':
+		return { 2, 2 };
+	case '3':
+		return { 3, 2 };
+	case '4':
+		return { 4, 2 };
+	case '5':
+		return { 5, 2 };
+	case '6':
+		return { 6, 2 };
+	case '7':
+		return { 7, 2 };
+	case '8':
+		return { 8, 2 };
+	case '9':
+		return { 9, 2 };
 	}
 }
 
-void TextManager::start_text(const Text* t[], uint8_t size) {
+void TextManager::start_text(const Text* t[], uint8_t size, Callback cb, void* context) {
 	writing = true;
 	text = t;
 	text_size = size;
 	current_index = 1;
 	second_line_index = 0;
 	index = 0;
+
+	after_text_callback = cb;
+	ctx = context;
 }
 
 void TextManager::update(float delta_time) {
@@ -179,6 +208,19 @@ void TextManager::update(float delta_time) {
 
 void TextManager::stop_text() {
 	writing = false;
+	waiting = false;
+
+	if (after_text_callback) after_text_callback(ctx);
+}
+
+void TextManager::next_text() {
+	if (waiting && writing) {
+		index++;
+		current_index = 1;
+		second_line_index = 0;
+		Log::log(LogType::INFO, "next text screen: " + std::to_string(index));
+		waiting = false;
+	}
 }
 
 bool TextManager::is_done() const { return !writing; }

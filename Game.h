@@ -3,6 +3,7 @@
 #include "Actor.h"
 #include "Player.h"
 #include "PlayerMapEventHandler.h"
+#include "TextEventHandler.h"
 
 enum class GameState {
 	MAP,
@@ -13,7 +14,7 @@ enum class GameState {
 class Game {
 private:
 	GameState state;
-	Stage stages[STAGES];
+	Stage* stages[STAGES];
 	Actor map_player;
 	//Actor fight_player;
 
@@ -21,12 +22,14 @@ private:
 	int8_t current_stage = -1;
 
 	PlayerMapEventHandler map_handler;
+	TextEventHandler text_handler;
 public:
 	Game() :
-		state(GameState::MAP),
+		state(GameState::DIALOGUE),
 		global_position({ 0,0 }),
 		map_player(Player()),
-		map_handler() {
+		map_handler(),
+		text_handler() {
 		global_position.x = map_player.get_x();
 		global_position.y = map_player.get_y();
 
@@ -44,6 +47,10 @@ public:
 	void handle_event(Event e);
 
 	bool tile_block(int8_t x, int8_t y);
+	COORDS get_tile()const;
+
+	void change_state(GameState s) { state = s; }
+	void update_position(COORDS coords);
 
 	Game(const Game&) = delete;
 	Game& operator=(const Game&) = delete;
